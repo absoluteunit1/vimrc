@@ -1,5 +1,4 @@
-syntax on 
-
+syntax on
 set noerrorbells
 set backspace=indent,eol,start
 set tabstop=4 softtabstop=4
@@ -19,31 +18,31 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-utils/vim-man'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-Plug 'mattn/emmet-vim'
-Plug 'valloric/matchtagalways'
-Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
-Plug 'mbbill/undotree'
 Plug 'valloric/youcompleteme'
+Plug 'mbbill/undotree'
+Plug 'bling/vim-airline'
+Plug 'valloric/matchtagalways'
+Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 colorscheme gruvbox
 set background=dark
 
-let mapleader = " "
 
+let mapleader = " "
+nnoremap <leader>o <C-w>o
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :NERDTree <CR> 
-nnoremap <silent> <Leader>+ :vertical resize +5<CR> 
+nnoremap <leader>pv :NERDTree<CR>
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertival resize -5<CR>
+
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
